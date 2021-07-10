@@ -3,14 +3,14 @@
 import UIKit
 import RxSwift
 
-class DialyNutrientsViewController: BaseViewController {
+class SummaryNutrientsViewController: BaseViewController {
     
     //MARK:- Outlets
     @IBOutlet private weak var tableView: UITableView!
     
     //MARK:- ViewModel
-    private var viewModel: DialyNutrientsViewModelProtocol!
-    func setViewModel(_ viewModel: DialyNutrientsViewModelProtocol) {
+    private var viewModel: SummaryNutrientsViewModelProtocol!
+    func setViewModel(_ viewModel: SummaryNutrientsViewModelProtocol) {
         self.viewModel = viewModel
     }
 
@@ -34,7 +34,7 @@ class DialyNutrientsViewController: BaseViewController {
 }
 
 //MARK:- setupTableView 
-extension DialyNutrientsViewController {
+extension SummaryNutrientsViewController {
     
     private func setupTableView() {
         tableView.tableFooterView = UIView()
@@ -45,3 +45,16 @@ extension DialyNutrientsViewController {
         tableView.register(IngredientsTableViewCel.nib, forCellReuseIdentifier: IngredientsTableViewCel.identifier)
     }
 }
+
+//MARK:- Actions
+extension SummaryNutrientsViewController {
+    
+    @IBAction func totalButtonTapped(_ sender: UIButton) {
+        viewModel.totalNutrients()
+    }
+    
+    @IBAction func TotalDialyButtonTapped(_ sender: UIButton) {
+        viewModel.totalNutrients()
+    }
+}
+

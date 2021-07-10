@@ -9,7 +9,8 @@
 import UIKit
 
 enum MainDestination {
-    case dialyNutrients(NutritionModel)
+    case summaryNutrients(NutritionModel)
+    case nutrients(title: String, items: [TotalNutritionModel])
 }
 
 protocol MainNavigatorProtocol {
@@ -20,8 +21,10 @@ class MainNavigator: BaseNavigator, MainNavigatorProtocol {
     
     func navigateTo(destination: MainDestination) {
         switch destination {
-        case .dialyNutrients(let details):
-            controller.push(MainFactory.dialyNutrients(nutritionDetails: details))
+        case .summaryNutrients(let details):
+            controller.push(MainFactory.summaryNutrients(nutritionDetails: details))
+        case .nutrients(let title, let items)
+            return
         }
     }
 }

@@ -17,11 +17,16 @@ class MainFactory {
         return vc
     }
     
-    static func dialyNutrients(nutritionDetails: NutritionModel) -> DialyNutrientsViewController {
-        let vc = DialyNutrientsViewController.instanceVc()
-        let vm = DialyNutrientsViewModel(nutritionDetails: nutritionDetails)
+    static func summaryNutrients(nutritionDetails: NutritionModel) -> SummaryNutrientsViewController {
+        let vc = SummaryNutrientsViewController.instanceVc()
+        let vm = SummaryNutrientsViewModel(nutritionDetails: nutritionDetails, navigator: MainNavigator(vc))
         vc.setViewModel(vm)
-        vc.title = ScreenTitles.dialyNutrition.title
+        vc.title = ScreenTitles.summryNutrition.title
         return vc
     }
+    
+//    static func nutrients (title: String, items: [TotalNutritionModel]) -> NutrientsViewController {
+//        let vc = NutrientsViewController.instanceVc()
+//        let vm = NutrientsViewModel(title: title, nutrientsItems: items)
+//    }
 }

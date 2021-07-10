@@ -101,27 +101,70 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
-        <!--Dialy Nutrients View Controller-->
+        <!--Summary Nutrients View Controller-->
         <scene sceneID="ZUp-uk-7Wb">
             <objects>
-                <viewController storyboardIdentifier="DialyNutrientsViewController" id="Uxp-h6-jVR" customClass="DialyNutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DialyNutrientsViewController" id="Uxp-h6-jVR" customClass="SummaryNutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEd-qO-8iK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-Rq-0bH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ty9-7f-D7e">
+                                <rect key="frame" x="0.0" y="792" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-lg-fg0">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZJf-B0-66L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Total Nutrients">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" title="Analyze">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="analyzeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ibi-NT-AjU"/>
+                                            <action selector="totalButtonTapped:" destination="Uxp-h6-jVR" eventType="touchUpInside" id="hTj-uD-A3d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScF-nW-IMW">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ASK-qp-mYz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Total Dialy">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" title="Analyze">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="TotalDialyButtonTapped:" destination="Uxp-h6-jVR" eventType="touchUpInside" id="xUf-cq-hSS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OUo-YJ-coU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ty9-7f-D7e" firstAttribute="leading" secondItem="OUo-YJ-coU" secondAttribute="leading" id="69U-O3-NY7"/>
                             <constraint firstItem="tW1-Rq-0bH" firstAttribute="top" secondItem="OUo-YJ-coU" secondAttribute="top" id="8Ol-8f-SaJ"/>
                             <constraint firstItem="tW1-Rq-0bH" firstAttribute="trailing" secondItem="OUo-YJ-coU" secondAttribute="trailing" id="Bz2-mB-WS3"/>
+                            <constraint firstItem="Ty9-7f-D7e" firstAttribute="top" secondItem="tW1-Rq-0bH" secondAttribute="bottom" constant="10" id="Cvx-OB-zlg"/>
+                            <constraint firstItem="OUo-YJ-coU" firstAttribute="trailing" secondItem="Ty9-7f-D7e" secondAttribute="trailing" id="MdO-Op-k2B"/>
                             <constraint firstItem="tW1-Rq-0bH" firstAttribute="leading" secondItem="OUo-YJ-coU" secondAttribute="leading" id="UdY-zX-L1r"/>
-                            <constraint firstItem="tW1-Rq-0bH" firstAttribute="bottom" secondItem="OUo-YJ-coU" secondAttribute="bottom" id="Xch-2e-37H"/>
+                            <constraint firstItem="OUo-YJ-coU" firstAttribute="bottom" secondItem="Ty9-7f-D7e" secondAttribute="bottom" constant="20" id="eyc-FH-ghn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,6 +174,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-4s-gL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="917.39130434782612" y="79.6875"/>
+        </scene>
+        <!--Nutrients View Controller-->
+        <scene sceneID="4HJ-g2-sNF">
+            <objects>
+                <viewController storyboardIdentifier="NutrientsViewController" id="oEZ-tx-eOc" customClass="NutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmH-AQ-tlP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="51J-pc-hP8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P6Q-q5-wGj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="51J-pc-hP8" firstAttribute="bottom" secondItem="P6Q-q5-wGj" secondAttribute="bottom" id="4Gi-gj-i5T"/>
+                            <constraint firstItem="51J-pc-hP8" firstAttribute="leading" secondItem="P6Q-q5-wGj" secondAttribute="leading" id="IEt-eo-tGp"/>
+                            <constraint firstItem="51J-pc-hP8" firstAttribute="top" secondItem="P6Q-q5-wGj" secondAttribute="top" id="VnD-uL-xIc"/>
+                            <constraint firstItem="51J-pc-hP8" firstAttribute="trailing" secondItem="P6Q-q5-wGj" secondAttribute="trailing" id="mgY-gx-iR7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="51J-pc-hP8" id="CWl-Vi-cVT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73L-T9-Xb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="80"/>
         </scene>
     </scenes>
     <resources>
@@ -142,6 +216,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
