@@ -22,7 +22,7 @@ struct TotalNutrientsKCal: Codable {
     }
 }
 
-
+// MARK: - TotalNutrientsKCal
 struct NutritionModel {
     
     let calories: String
@@ -35,19 +35,24 @@ struct NutritionModel {
     init(_ response: NutritionResponse) {
         
         calories = "\(response.calories ?? 0)"
-        totalWeight = "\(response.totalWeight ?? 0)"
+        totalWeight = "\(response.totalWeight?.rounded(toPlaces: 2) ?? 0)"
         
         totalNutrients = response.totalNutrients?.map({TotalNutritionModel($0.value)}) ?? []
         
         totalNutrientsDaily = response.totalDaily?.map({TotalNutritionModel($0.value)}) ?? []
         
+        //This about summry or total caloires and energy
+        //weight will added to them also
         if let totalKCal = response.totalNutrientsKCal {
             totalNutrientsKCal.append(TotalNutritionModel(totalKCal.enercKcal))
             totalNutrientsKCal.append(TotalNutritionModel(totalKCal.fatKcal))
             totalNutrientsKCal.append(TotalNutritionModel(totalKCal.procntKcal))
             totalNutrientsKCal.append(TotalNutritionModel(totalKCal.fatKcal))
+            totalNutrientsKCal.append(TotalNutritionModel(TotalNutritionDataResponse(label: Messages.weight.message, quantity: response.totalWeight ?? 0, unit: "")))
         }
         
+        //select only items to appear them in screen
+        //that's about FF3 story which show (Calories,Fat, Cholesterol, Sodium,Carbohydrate (Fiber, Sugar) ,Protein,Vitamin , Calcium , Iron and Potassium)
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(TotalNutritionDataResponse(label: Messages.calories.message, quantity: response.calories, unit: Unit.kcal.rawValue)))
         
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["FAT"]))

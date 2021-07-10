@@ -11,6 +11,7 @@ enum  Messages {
     case appName
     case ok
     case calories
+    case weight
     
     var message: String {
         switch self {
@@ -21,6 +22,9 @@ enum  Messages {
             
         case .calories:
             return NSLocalizedString("Calories", comment: "")
+        
+        case .weight:
+            return NSLocalizedString("Total Weight", comment: "")
         }
     }
 }

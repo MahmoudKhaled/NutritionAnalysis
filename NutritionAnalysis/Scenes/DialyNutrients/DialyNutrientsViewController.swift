@@ -30,6 +30,11 @@ class DialyNutrientsViewController: BaseViewController {
                 cell.nutrition = nutrition
             }.disposed(by: disposeBage)
     }
+
+}
+
+//MARK:- setupTableView 
+extension DialyNutrientsViewController {
     
     private func setupTableView() {
         tableView.tableFooterView = UIView()

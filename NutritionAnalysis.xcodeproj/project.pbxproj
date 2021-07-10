@@ -42,7 +42,6 @@
 		574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E473C269A229E00A94A85 /* DoubleExtension.swift */; };
 		574E474C269A28FE00A94A85 /* DialyNutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E474B269A28FE00A94A85 /* DialyNutrientsViewController.swift */; };
 		574E474F269A291F00A94A85 /* DialyNutrientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E474E269A291F00A94A85 /* DialyNutrientsViewModel.swift */; };
-		574E4756269A2D8B00A94A85 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4755269A2D8B00A94A85 /* NSObjectExtension.swift */; };
 		574E475C269A317F00A94A85 /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E475B269A317F00A94A85 /* BaseNavigator.swift */; };
 		574E475F269A319000A94A85 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E475E269A319000A94A85 /* MainNavigator.swift */; };
 		574E4762269A31AD00A94A85 /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4761269A31AD00A94A85 /* MainFactory.swift */; };
@@ -92,7 +91,6 @@
 		574E473C269A229E00A94A85 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		574E474B269A28FE00A94A85 /* DialyNutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialyNutrientsViewController.swift; sourceTree = "<group>"; };
 		574E474E269A291F00A94A85 /* DialyNutrientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialyNutrientsViewModel.swift; sourceTree = "<group>"; };
-		574E4755269A2D8B00A94A85 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		574E475B269A317F00A94A85 /* BaseNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
 		574E475E269A319000A94A85 /* MainNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		574E4761269A31AD00A94A85 /* MainFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		574E46B12699C10E00A94A85 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				574E4755269A2D8B00A94A85 /* NSObjectExtension.swift */,
 				574E473C269A229E00A94A85 /* DoubleExtension.swift */,
 				574E46F72699D63100A94A85 /* UIViewControllerExtension.swift */,
 				574E47052699D8B300A94A85 /* UIViewExtension.swift */,
@@ -467,7 +464,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */,
-				574E4756269A2D8B00A94A85 /* NSObjectExtension.swift in Sources */,
 				574E46DB2699CF0E00A94A85 /* NetworkError.swift in Sources */,
 				574E47112699DAA900A94A85 /* IngredientViewModel.swift in Sources */,
 				574E47142699DABE00A94A85 /* IngredientRepo.swift in Sources */,

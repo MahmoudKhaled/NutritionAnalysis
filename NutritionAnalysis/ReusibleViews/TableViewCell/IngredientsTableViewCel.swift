@@ -1,17 +1,13 @@
-//
 //  IngredientsTableViewCel.swift
-//  NutritionAnalysis
-//
-//  Created by Mahmoud Khaled on 7/10/21.
-//
 
 import UIKit
 
-class IngredientsTableViewCel: UITableViewCell {
+final class IngredientsTableViewCel: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var unitLabel: UILabel!
+    //MARK:- Outlets
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var quantityLabel: UILabel!
+    @IBOutlet private weak var unitLabel: UILabel!
     
     var nutrition: TotalNutritionModel? {
         didSet {
@@ -24,8 +20,5 @@ class IngredientsTableViewCel: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    
 }
