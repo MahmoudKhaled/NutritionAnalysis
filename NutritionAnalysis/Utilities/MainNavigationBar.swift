@@ -9,7 +9,7 @@ class MainNavigationController: UINavigationController {
 
     private func setupNavigationBar() {
         navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white
+            .foregroundColor: UIColor.black
         ]
 
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

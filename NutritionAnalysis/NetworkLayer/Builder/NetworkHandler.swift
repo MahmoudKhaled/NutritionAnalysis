@@ -103,7 +103,6 @@ class NetworkHandler {
             
             switch response.result {
             case .success(let data):
-                print("=====----->>>> data", String(data: data, encoding: .utf8) ?? "")
                 promise.resolve(with: data)
             case .failure(let error):
                 print("=====----->>>> error", error)
