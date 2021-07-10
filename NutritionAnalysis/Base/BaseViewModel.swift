@@ -3,10 +3,7 @@
 import RxSwift
 import RxRelay
 
-protocol ErrorRepoProtocol : class {
-    func didFetchError(_ error : Error?)
-}
-
+//MARK:- BaseViewModelProcotol
 protocol BaseViewModelProtocol {
     var showAlertMessage: PublishSubject<String> { get set }
     var indicatorState: PublishSubject<IndicatorState> { get set }
@@ -17,8 +14,9 @@ public class BaseViewModel: BaseViewModelProtocol {
     var indicatorState: PublishSubject<IndicatorState> = PublishSubject()
 }
 
+//MARK:- implement ErrorRepoProtocol
 extension BaseViewModel: ErrorRepoProtocol {
-    func didFetchError(_ error: Error?) {
+    public func didFetchError(_ error: Error?) {
         indicatorState.onNext(.loaded)
         if let error = error {
             showAlertMessage.onNext(error.localizedDescription)

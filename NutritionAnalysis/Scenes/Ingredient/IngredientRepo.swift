@@ -15,6 +15,7 @@ final class IngredientRepo: BaseRepo, IngredientRepoProtocol {
     
     weak var delegate: IngredientRepoDelegate?
     
+    // perform api to get details of data
     func getAnalysisData(parameter: BodyParameters) {
         let request = NutritionAnalysisAPI.nutritionData(parameter)
         do {

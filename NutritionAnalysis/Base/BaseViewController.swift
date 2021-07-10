@@ -5,20 +5,26 @@ import RxSwift
 
 public class BaseViewController: UIViewController {
         
+    //MARK:- variables
     var baseViewModel: BaseViewModelProtocol!
     let disposeBage = DisposeBag()
     
+    //MARK:- Functionality
     public override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackButtonImage()
+        setupBackButtonTitle()
         seuptBaseViewModelSubscribe()
     }
     
-    private func setupBackButtonImage() {
+
+    // Remove back button title
+    private func setupBackButtonTitle() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
+
+//MARK:- Extension for setup viewModelSubscriber
 extension BaseViewController {
     
     private func seuptBaseViewModelSubscribe() {
@@ -29,10 +35,9 @@ extension BaseViewController {
         baseViewModel.showAlertMessage.withUnretained(self).subscribe { owner, message in
             owner.showAlert(with: message)
         }.disposed(by: disposeBage)
-
-        
     }
     
+    //show and hide HUDProgress
     private func setupIndicator(state: IndicatorState) {
         switch state {
             

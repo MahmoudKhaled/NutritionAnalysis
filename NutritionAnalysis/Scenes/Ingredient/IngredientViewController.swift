@@ -24,12 +24,14 @@ class IngredientViewController: BaseViewController {
         subscribeAnalyzeButtonEnables()
     }
     
+    //change ingredientText in viewModel
     private func bindTextViewsToViewModel() {
         ingredientTextView.rx.text.orEmpty
             .bind(to: viewModel.analyzeText)
             .disposed(by: disposeBage)
     }
     
+    //change analyzeButton status 
     private func subscribeAnalyzeButtonEnables() {
         viewModel.subscribeIsAnalyzeEnable
             .bind(to: analyzeButton.rx.isEnabled)
