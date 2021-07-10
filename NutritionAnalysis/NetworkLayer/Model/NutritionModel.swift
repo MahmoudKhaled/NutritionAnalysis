@@ -58,7 +58,7 @@ struct NutritionModel {
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["CHOCDF"]))
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["PROCNT"]))
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["K"]))
-        summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["Iron"]))
+        summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["FE"]))
         summaryOFtotalNutrientsDaily.append(TotalNutritionModel(response.totalDaily?["VITD"]))
     }
 }

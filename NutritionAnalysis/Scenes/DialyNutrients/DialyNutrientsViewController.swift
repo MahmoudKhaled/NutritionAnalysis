@@ -14,6 +14,7 @@ class DialyNutrientsViewController: BaseViewController {
         self.viewModel = viewModel
     }
 
+    //MARK:- Functionality
     override func viewDidLoad() {
         super.baseViewModel = viewModel
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class DialyNutrientsViewController: BaseViewController {
         registerTableViewCell()
     }
     
+    //MARK:- Functionality
     private func subscribeToNutrientsItems() {
         viewModel.nutrientsItems
             .bind(to: tableView.rx.items(cellIdentifier: IngredientsTableViewCel.identifier, cellType: IngredientsTableViewCel.self)) { row, nutrition, cell in
