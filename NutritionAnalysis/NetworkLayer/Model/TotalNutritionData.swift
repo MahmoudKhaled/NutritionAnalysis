@@ -12,12 +12,12 @@ struct TotalNutritionDataResponse: Codable {
 // MARK: - TotalData
 struct TotalNutritionModel: Codable {
     let label: String
-    let quantity: Double
+    let quantity: String
     let unit: String
     
     init(_ response: TotalNutritionDataResponse?) {
         label = response?.label ?? ""
-        quantity = response?.quantity ?? 0
+        quantity = "\(response?.quantity?.rounded(toPlaces: 2) ?? 0)"
         unit = response?.unit ?? ""
     }
 }
