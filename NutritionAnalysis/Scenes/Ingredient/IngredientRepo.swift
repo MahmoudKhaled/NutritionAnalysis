@@ -8,7 +8,7 @@ protocol IngredientRepoProtocol {
 }
 
 protocol IngredientRepoDelegate: ErrorRepoProtocol {
-    func didGetData()
+    func didGetData(response: NutritionModel)
 }
 
 final class IngredientRepo: BaseRepo, IngredientRepoProtocol {
@@ -22,8 +22,9 @@ final class IngredientRepo: BaseRepo, IngredientRepoProtocol {
             try networkHandeler.request(request, debug: true).decoded(toType: NutritionResponse.self).observe { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .success:
-                    self.delegate?.didGetData()
+                case .success(let response):
+                    let nutrition = NutritionModel(response)
+                    self.delegate?.didGetData(response: nutrition)
                 case .failure(let error):
                     self.delegate?.didFetchError(error)
                 }

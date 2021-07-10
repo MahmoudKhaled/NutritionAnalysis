@@ -60,7 +60,7 @@ extension IngredientViewModel: IngredientViewModelProtocol {
 //MARK:- implementation of IngredientRepoDelegate
 extension IngredientViewModel: IngredientRepoDelegate {
     
-    func didGetData() {
+    func didGetData(response: NutritionModel) {
         indicatorState.onNext(.loaded)
         //TODO:- navigate to details of food
     }

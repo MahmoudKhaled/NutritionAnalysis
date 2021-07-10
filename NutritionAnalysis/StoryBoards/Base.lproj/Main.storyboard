@@ -39,7 +39,7 @@
                                 <rect key="frame" x="20" y="44" width="374" height="728"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p90-ir-fgc">
-                                        <rect key="frame" x="0.0" y="10" width="374" height="728"/>
+                                        <rect key="frame" x="0.0" y="10" width="374" height="691.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter analyze data here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ay-if-rLH">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-yw-Vef">
-                                                <rect key="frame" x="0.0" y="40.5" width="374" height="687.5"/>
+                                                <rect key="frame" x="0.0" y="40.5" width="374" height="651"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -71,7 +71,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="p90-ir-fgc" secondAttribute="bottom" id="5h3-aT-kD5"/>
                                     <constraint firstAttribute="trailing" secondItem="p90-ir-fgc" secondAttribute="trailing" id="8yL-sn-3Fv"/>
-                                    <constraint firstItem="p90-ir-fgc" firstAttribute="height" secondItem="FTn-0q-7f5" secondAttribute="height" id="DgQ-g6-M1u"/>
+                                    <constraint firstItem="p90-ir-fgc" firstAttribute="height" secondItem="FTn-0q-7f5" secondAttribute="height" multiplier="0.95" id="DgQ-g6-M1u"/>
                                     <constraint firstItem="p90-ir-fgc" firstAttribute="leading" secondItem="FTn-0q-7f5" secondAttribute="leading" id="IIX-P8-HWY"/>
                                     <constraint firstItem="p90-ir-fgc" firstAttribute="width" secondItem="FTn-0q-7f5" secondAttribute="width" id="hPA-Sz-wbF"/>
                                     <constraint firstItem="p90-ir-fgc" firstAttribute="top" secondItem="FTn-0q-7f5" secondAttribute="top" constant="10" id="qqP-pP-NMR"/>

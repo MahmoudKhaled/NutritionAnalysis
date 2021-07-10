@@ -37,6 +37,9 @@
 		574E47222699E87500A94A85 /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E47212699E87500A94A85 /* BaseRepo.swift */; };
 		574E47252699E8C800A94A85 /* IndicatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E47242699E8C800A94A85 /* IndicatorType.swift */; };
 		574E472A2699FF5A00A94A85 /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E47292699FF5A00A94A85 /* NutritionModel.swift */; };
+		574E472F269A173300A94A85 /* TotalNutritionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E472E269A173300A94A85 /* TotalNutritionData.swift */; };
+		574E4732269A1A6C00A94A85 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4731269A1A6C00A94A85 /* Unit.swift */; };
+		574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E473C269A229E00A94A85 /* DoubleExtension.swift */; };
 		AA44B53016BD8FF9024E709F /* Pods_NutritionAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FA2DDCA67820CD795C6304 /* Pods_NutritionAnalysis.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,9 @@
 		574E47212699E87500A94A85 /* BaseRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRepo.swift; sourceTree = "<group>"; };
 		574E47242699E8C800A94A85 /* IndicatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorType.swift; sourceTree = "<group>"; };
 		574E47292699FF5A00A94A85 /* NutritionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
+		574E472E269A173300A94A85 /* TotalNutritionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalNutritionData.swift; sourceTree = "<group>"; };
+		574E4731269A1A6C00A94A85 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		574E473C269A229E00A94A85 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		CB274629C624CAA3C800F0E7 /* Pods-NutritionAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionAnalysis.release.xcconfig"; path = "Target Support Files/Pods-NutritionAnalysis/Pods-NutritionAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +159,7 @@
 		574E46B12699C10E00A94A85 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				574E473C269A229E00A94A85 /* DoubleExtension.swift */,
 				574E46F72699D63100A94A85 /* UIViewControllerExtension.swift */,
 				574E47052699D8B300A94A85 /* UIViewExtension.swift */,
 				574E47172699E1A500A94A85 /* UITextViewExtension.swift */,
@@ -189,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				574E47292699FF5A00A94A85 /* NutritionModel.swift */,
+				574E472E269A173300A94A85 /* TotalNutritionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				574E46FA2699D67300A94A85 /* StoryBoardTypes.swift */,
 				574E47022699D79200A94A85 /* Messsage.swift */,
 				574E47242699E8C800A94A85 /* IndicatorType.swift */,
+				574E4731269A1A6C00A94A85 /* Unit.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -389,11 +398,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */,
 				574E46DB2699CF0E00A94A85 /* NetworkError.swift in Sources */,
 				574E47112699DAA900A94A85 /* IngredientViewModel.swift in Sources */,
 				574E47142699DABE00A94A85 /* IngredientRepo.swift in Sources */,
 				574E47222699E87500A94A85 /* BaseRepo.swift in Sources */,
 				574E471C2699E86500A94A85 /* BaseViewController.swift in Sources */,
+				574E4732269A1A6C00A94A85 /* Unit.swift in Sources */,
+				574E472F269A173300A94A85 /* TotalNutritionData.swift in Sources */,
 				574E47032699D79200A94A85 /* Messsage.swift in Sources */,
 				574E471F2699E86D00A94A85 /* BaseViewModel.swift in Sources */,
 				574E46EB2699D36200A94A85 /* BodyParameters.swift in Sources */,
