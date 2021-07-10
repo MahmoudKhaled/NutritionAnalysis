@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKeyboard()
         
         let vc = IngredientViewController.instanceVc()
-        let vm = IngredientViewModel(repo: IngredientRepo())
+        let vm = IngredientViewModel(repo: IngredientRepo(), navigator: MainNavigator(vc))
         vc.setViewModel(vm)
         
-        setRootViewController(vc , animated: false)
+        setRootViewController(MainNavigationController(rootViewController: vc) , animated: false)
         return true
     }
     

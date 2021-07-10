@@ -2,18 +2,21 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol DialyNutrientsViewModelProtocol: BaseViewModelProtocol {
-    var nutrientsItems: PublishSubject<[TotalNutritionModel]> { get set }
+    var nutrientsItems: BehaviorRelay<[TotalNutritionModel]> { get set }
 }
 
 final class DialyNutrientsViewModel: BaseViewModel {
     
-    var nutrientsItems: PublishSubject<[TotalNutritionModel]> = PublishSubject()
+    var nutrientsItems: BehaviorRelay<[TotalNutritionModel]> = BehaviorRelay(value: [])
+    private var nutritionDetails: NutritionModel
 
-    init(items: NutritionModel) {
+    init(nutritionDetails: NutritionModel) {
+        self.nutritionDetails = nutritionDetails
         super.init()
-        self.nutrientsItems.onNext(items.totalNutrientsDaily)
+        self.nutrientsItems.accept(nutritionDetails.summaryOFtotalNutrientsDaily)
     }
 }
 

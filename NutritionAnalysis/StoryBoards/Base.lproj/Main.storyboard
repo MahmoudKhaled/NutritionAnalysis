@@ -101,17 +101,18 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Dialy Nutrients View Controller-->
         <scene sceneID="ZUp-uk-7Wb">
             <objects>
-                <viewController id="Uxp-h6-jVR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DialyNutrientsViewController" id="Uxp-h6-jVR" customClass="DialyNutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEd-qO-8iK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-Rq-0bH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-Rq-0bH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OUo-YJ-coU"/>
@@ -123,6 +124,9 @@
                             <constraint firstItem="tW1-Rq-0bH" firstAttribute="bottom" secondItem="OUo-YJ-coU" secondAttribute="bottom" id="Xch-2e-37H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="tW1-Rq-0bH" id="Ary-sW-oLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-4s-gL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

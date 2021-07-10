@@ -19,11 +19,13 @@ final class IngredientViewModel: BaseViewModel {
     var analyzeText: BehaviorRelay<String> = BehaviorRelay(value: "")
     private var parameters =  IngredientParameters()
     private let disposBag = DisposeBag()
-    
-    //MARK:- Initialization
     private var repo: IngredientRepoProtocol
-    init(repo: IngredientRepoProtocol) {
+    private let navigator: MainNavigatorProtocol
+    //MARK:- Initialization
+   
+    init(repo: IngredientRepoProtocol, navigator: MainNavigatorProtocol) {
         self.repo = repo
+        self.navigator = navigator
         super.init()
         self.repo.delegate = self
         setupAnalyizeTextSubscribe()
@@ -63,6 +65,7 @@ extension IngredientViewModel: IngredientRepoDelegate {
     func didGetData(response: NutritionModel) {
         indicatorState.onNext(.loaded)
         //TODO:- navigate to details of food
+        navigator.navigateTo(destination: .dialyNutrients(response))
     }
 }
 

@@ -20,3 +20,16 @@ extension UIView {
         }
     }
 }
+
+extension UIView
+{
+    public static var identifier : String
+    {
+        return NSStringFromClass(Self.self).components(separatedBy: ".").last!
+    }
+    
+    public static var nib: UINib
+    {
+        return .init(nibName: identifier, bundle: nil)
+    }
+}
