@@ -18,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupWindow()
         setupKeyboard()
-        
-        let vc = IngredientViewController.instanceVc()
-        let vm = IngredientViewModel(repo: IngredientRepo(), navigator: MainNavigator(vc))
-        vc.setViewModel(vm)
-        
-        setRootViewController(MainNavigationController(rootViewController: vc) , animated: false)
+        setRootViewController(MainFactory.start(), animated: false)
         return true
     }
     
