@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupWindow()
         setupKeyboard()
+        setRootViewController(MainFactory.start(), animated: false)
         return true
     }
     
@@ -36,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK:- seetRoot
     func setRootViewController(_ viewController: UIViewController, animated: Bool) {
-        
         if animated {
             let transition = UIView.AnimationOptions.transitionCrossDissolve
             window?.rootViewController = viewController

@@ -10,6 +10,8 @@ import Foundation
 enum  Messages {
     case appName
     case ok
+    case calories
+    case weight
     
     var message: String {
         switch self {
@@ -17,6 +19,12 @@ enum  Messages {
             return "Nutrition Analysis"
         case .ok:
             return NSLocalizedString("Ok", comment: "")
+            
+        case .calories:
+            return NSLocalizedString("Calories", comment: "")
+        
+        case .weight:
+            return NSLocalizedString("Total Weight", comment: "")
         }
     }
 }
