@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NutrientsTableViewCell: UITableViewCell {
+final class IngredientsTableViewCel: UITableViewCell {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var quantityLabel: UILabel!

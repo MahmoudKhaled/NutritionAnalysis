@@ -40,7 +40,7 @@
 		574E472F269A173300A94A85 /* TotalNutritionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E472E269A173300A94A85 /* TotalNutritionData.swift */; };
 		574E4732269A1A6C00A94A85 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4731269A1A6C00A94A85 /* Unit.swift */; };
 		574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E473C269A229E00A94A85 /* DoubleExtension.swift */; };
-		574E4744269A251200A94A85 /* NutrientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4742269A251200A94A85 /* NutrientsTableViewCell.swift */; };
+		574E4744269A251200A94A85 /* IngredientsTableViewCel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4742269A251200A94A85 /* IngredientsTableViewCel.swift */; };
 		574E4745269A251200A94A85 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574E4743269A251200A94A85 /* IngredientsTableViewCell.xib */; };
 		574E474C269A28FE00A94A85 /* DialyNutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E474B269A28FE00A94A85 /* DialyNutrientsViewController.swift */; };
 		574E474F269A291F00A94A85 /* DialyNutrientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E474E269A291F00A94A85 /* DialyNutrientsViewModel.swift */; };
@@ -86,7 +86,7 @@
 		574E472E269A173300A94A85 /* TotalNutritionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalNutritionData.swift; sourceTree = "<group>"; };
 		574E4731269A1A6C00A94A85 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		574E473C269A229E00A94A85 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		574E4742269A251200A94A85 /* NutrientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsTableViewCell.swift; sourceTree = "<group>"; };
+		574E4742269A251200A94A85 /* IngredientsTableViewCel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCel.swift; sourceTree = "<group>"; };
 		574E4743269A251200A94A85 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		574E474B269A28FE00A94A85 /* DialyNutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialyNutrientsViewController.swift; sourceTree = "<group>"; };
 		574E474E269A291F00A94A85 /* DialyNutrientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialyNutrientsViewModel.swift; sourceTree = "<group>"; };
@@ -301,7 +301,7 @@
 		574E4741269A24AE00A94A85 /* ReusibleViews */ = {
 			isa = PBXGroup;
 			children = (
-				574E4742269A251200A94A85 /* NutrientsTableViewCell.swift */,
+				574E4742269A251200A94A85 /* IngredientsTableViewCel.swift */,
 				574E4743269A251200A94A85 /* IngredientsTableViewCell.xib */,
 			);
 			path = ReusibleViews;
@@ -448,7 +448,7 @@
 			files = (
 				574E473D269A229F00A94A85 /* DoubleExtension.swift in Sources */,
 				574E4756269A2D8B00A94A85 /* NSObjectExtension.swift in Sources */,
-				574E4744269A251200A94A85 /* NutrientsTableViewCell.swift in Sources */,
+				574E4744269A251200A94A85 /* IngredientsTableViewCel.swift in Sources */,
 				574E46DB2699CF0E00A94A85 /* NetworkError.swift in Sources */,
 				574E47112699DAA900A94A85 /* IngredientViewModel.swift in Sources */,
 				574E47142699DABE00A94A85 /* IngredientRepo.swift in Sources */,
