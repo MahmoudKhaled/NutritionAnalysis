@@ -3,58 +3,48 @@
 import UIKit
 import RxSwift
 
-class SummaryNutrientsViewController: BaseViewController {
+final class SummaryNutrientsViewController: NutrientsViewController {
     
     //MARK:- Outlets
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var totalButton: UIButton!
+    @IBOutlet private weak var dialyButton: UIButton!
     
     //MARK:- ViewModel
     private var viewModel: SummaryNutrientsViewModelProtocol!
     func setViewModel(_ viewModel: SummaryNutrientsViewModelProtocol) {
+        super.setViewModel(viewModel)
         self.viewModel = viewModel
     }
-
+    
     //MARK:- Functionality
     override func viewDidLoad() {
-        super.baseViewModel = viewModel
         super.viewDidLoad()
-        subscribeToNutrientsItems()
-        setupTableView()
-        registerTableViewCell()
-    }
-    
-    //MARK:- Functionality
-    private func subscribeToNutrientsItems() {
-        viewModel.nutrientsItems
-            .bind(to: tableView.rx.items(cellIdentifier: IngredientsTableViewCel.identifier, cellType: IngredientsTableViewCel.self)) { row, nutrition, cell in
-                cell.nutrition = nutrition
-            }.disposed(by: disposeBage)
-    }
-
-}
-
-//MARK:- setupTableView 
-extension SummaryNutrientsViewController {
-    
-    private func setupTableView() {
-        tableView.tableFooterView = UIView()
-        tableView.rowHeight = 70
-    }
-    
-    private func registerTableViewCell() {
-        tableView.register(IngredientsTableViewCel.nib, forCellReuseIdentifier: IngredientsTableViewCel.identifier)
+        setupButtonActions()
     }
 }
 
 //MARK:- Actions
 extension SummaryNutrientsViewController {
     
-    @IBAction func totalButtonTapped(_ sender: UIButton) {
-        viewModel.totalNutrients()
+    private func setupButtonActions() {
+        subscribeToDialyButton()
+        subscribeToTotalButton()
     }
     
-    @IBAction func TotalDialyButtonTapped(_ sender: UIButton) {
-        viewModel.totalNutrients()
+    private func subscribeToTotalButton() {
+        totalButton.rx.tap
+            .withUnretained(self)
+            .subscribe { owner, _ in
+                owner.viewModel.totalNutrients()
+            }.disposed(by: disposeBage)
+    }
+    
+    private func subscribeToDialyButton() {
+        dialyButton.rx.tap
+            .withUnretained(self)
+            .subscribe { owner, _ in
+                owner.viewModel.dialyNutrients()
+            }.disposed(by: disposeBage)
     }
 }
 

@@ -25,8 +25,11 @@ class MainFactory {
         return vc
     }
     
-//    static func nutrients (title: String, items: [TotalNutritionModel]) -> NutrientsViewController {
-//        let vc = NutrientsViewController.instanceVc()
-//        let vm = NutrientsViewModel(title: title, nutrientsItems: items)
-//    }
+    static func nutrients (title: String, items: [TotalNutritionModel]) -> NutrientsViewController {
+        let vc = NutrientsViewController.instanceVc()
+        let vm = NutrientsViewModel(nutrientsItems: items)
+        vc.title = title
+        vc.setViewModel(vm)
+        return vc
+    }
 }

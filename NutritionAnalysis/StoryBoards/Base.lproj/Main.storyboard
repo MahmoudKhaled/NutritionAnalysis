@@ -104,7 +104,7 @@
         <!--Summary Nutrients View Controller-->
         <scene sceneID="ZUp-uk-7Wb">
             <objects>
-                <viewController storyboardIdentifier="DialyNutrientsViewController" id="Uxp-h6-jVR" customClass="SummaryNutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SummaryNutrientsViewController" id="Uxp-h6-jVR" customClass="SummaryNutrientsViewController" customModule="NutritionAnalysis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEd-qO-8iK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,6 @@
                                         </state>
                                         <connections>
                                             <action selector="analyzeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ibi-NT-AjU"/>
-                                            <action selector="totalButtonTapped:" destination="Uxp-h6-jVR" eventType="touchUpInside" id="hTj-uD-A3d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScF-nW-IMW">
@@ -148,9 +147,6 @@
                                         <state key="disabled" title="Analyze">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="TotalDialyButtonTapped:" destination="Uxp-h6-jVR" eventType="touchUpInside" id="xUf-cq-hSS"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -168,7 +164,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dialyButton" destination="ScF-nW-IMW" id="6hE-qS-Tdl"/>
                         <outlet property="tableView" destination="tW1-Rq-0bH" id="Ary-sW-oLd"/>
+                        <outlet property="totalButton" destination="6zq-lg-fg0" id="0dh-em-mKJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-4s-gL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

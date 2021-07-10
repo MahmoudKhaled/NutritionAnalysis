@@ -3,14 +3,14 @@
 import Foundation
 import RxRelay
 
-protocol NutrientsViewModelProtocol: BaseNutrientsViewModelProtocol {
-    
+public protocol NutrientsViewModelProtocol: BaseViewModelProtocol {
+    var nutrientsItems: BehaviorRelay<[TotalNutritionModel]> { get set }
 }
 
-class NutrientsViewModel: BaseViewModel {
+public class NutrientsViewModel: BaseViewModel {
     
     //MARK:- variables
-    var nutrientsItems: BehaviorRelay<[TotalNutritionModel]> = BehaviorRelay(value: [])
+    public var nutrientsItems: BehaviorRelay<[TotalNutritionModel]> = BehaviorRelay(value: [])
     
     //MARK:- Initialization
     init(nutrientsItems: [TotalNutritionModel]) {

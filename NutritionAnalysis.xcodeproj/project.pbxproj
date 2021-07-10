@@ -50,7 +50,6 @@
 		574E476D269A353B00A94A85 /* IngredientsTableViewCel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574E476B269A353B00A94A85 /* IngredientsTableViewCel.xib */; };
 		574E477A269A4D6300A94A85 /* NutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4779269A4D6300A94A85 /* NutrientsViewController.swift */; };
 		574E477E269A4DD000A94A85 /* NutrientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E477D269A4DD000A94A85 /* NutrientsViewModel.swift */; };
-		574E4781269A57D900A94A85 /* BaseNutrientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E4780269A57D900A94A85 /* BaseNutrientsViewModel.swift */; };
 		AA44B53016BD8FF9024E709F /* Pods_NutritionAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FA2DDCA67820CD795C6304 /* Pods_NutritionAnalysis.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +101,6 @@
 		574E476B269A353B00A94A85 /* IngredientsTableViewCel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCel.xib; sourceTree = "<group>"; };
 		574E4779269A4D6300A94A85 /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		574E477D269A4DD000A94A85 /* NutrientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewModel.swift; sourceTree = "<group>"; };
-		574E4780269A57D900A94A85 /* BaseNutrientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNutrientsViewModel.swift; sourceTree = "<group>"; };
 		CB274629C624CAA3C800F0E7 /* Pods-NutritionAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionAnalysis.release.xcconfig"; path = "Target Support Files/Pods-NutritionAnalysis/Pods-NutritionAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,9 +173,8 @@
 		574E46B02699C10700A94A85 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				574E4783269A582E00A94A85 /* BaseNutrients */,
-				574E4778269A4D4300A94A85 /* Nutrients */,
 				574E4749269A28A500A94A85 /* SummaryNutrients */,
+				574E4778269A4D4300A94A85 /* Nutrients */,
 				574E470B2699DA5700A94A85 /* Ingredient */,
 			);
 			path = Scenes;
@@ -365,14 +362,6 @@
 			path = Nutrients;
 			sourceTree = "<group>";
 		};
-		574E4783269A582E00A94A85 /* BaseNutrients */ = {
-			isa = PBXGroup;
-			children = (
-				574E4780269A57D900A94A85 /* BaseNutrientsViewModel.swift */,
-			);
-			path = BaseNutrients;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,7 +487,6 @@
 				574E4732269A1A6C00A94A85 /* Unit.swift in Sources */,
 				574E477E269A4DD000A94A85 /* NutrientsViewModel.swift in Sources */,
 				574E4765269A32F500A94A85 /* ScreenTitles.swift in Sources */,
-				574E4781269A57D900A94A85 /* BaseNutrientsViewModel.swift in Sources */,
 				574E472F269A173300A94A85 /* TotalNutritionData.swift in Sources */,
 				574E47032699D79200A94A85 /* Messsage.swift in Sources */,
 				574E471F2699E86D00A94A85 /* BaseViewModel.swift in Sources */,
