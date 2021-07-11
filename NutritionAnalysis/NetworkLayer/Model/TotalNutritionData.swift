@@ -10,7 +10,7 @@ struct TotalNutritionDataResponse: Codable {
 }
 
 // MARK: - TotalData
-struct TotalNutritionModel: Codable {
+public struct TotalNutritionModel: Codable {
     let label: String
     let quantity: String
     let unit: String
