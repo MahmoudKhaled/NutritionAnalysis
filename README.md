@@ -22,7 +22,7 @@
 - This application uses the Model-View-ViewModel (refered to as MVVM) architecture with RXSwift
     the main purpose of the MVVM is to move the data state from the View to the ViewModel.
  
- - This application use network layer whic build on 'Alamofire' which call service APIs so you can call APIs  and parse response in an easy way .
+ - This application use network layer which build on 'Alamofire', so you can call APIs  and parse response in an easy way .
 
 ## Scenes:
 * Group of app scenes: 
