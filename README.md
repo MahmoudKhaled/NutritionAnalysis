@@ -4,7 +4,7 @@
 * iOS 13.0+
 
 ## Setup Configs
-- There is two case -> First one:- checkout  "master" branch to run last version, this bracnh will run scenario about (anaylize line to get nutrition then display screen of summary which contain two buttons (total nutrition and dialy nutrition) when TotalButton tapped will show screen contains total nutrition which returned from "totalNutrients" of  service API as FF2 requird.
+- There are two case -> First one:- checkout  "master" branch to run last version, this bracnh will run scenario about (anaylize line to get nutrition then display screen of summary which contain two buttons (total nutrition and dialy nutrition) when TotalButton tapped will show screen contains total nutrition which returned from "totalNutrients" of  service API as FF2 requird.
         Anothher button is DailyNutrition tapped will show Calories,Fat,Cholesterol,Sodium,Carbohydrate (Fiber, Sugar),Protein,Vitamin,Calcium,Iron and Potassium tags which contained from "totalDaily" key from service API as FF3 required).
         I tried to achieve all user story, if it's wrong scenario so i missunder stand API Service so please run second case. (FF1, FF2, FF3, FF4)
     
