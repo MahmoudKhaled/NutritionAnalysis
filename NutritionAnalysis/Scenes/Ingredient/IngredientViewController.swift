@@ -7,6 +7,7 @@ import RxCocoa
 class IngredientViewController: BaseViewController {
     
     //MARK:- Outlets
+    @IBOutlet private weak var placeHolderLabel: UILabel!
     @IBOutlet private weak var ingredientTextView: UITextView!
     @IBOutlet private weak var analyzeButton: UIButton!
     
@@ -16,13 +17,16 @@ class IngredientViewController: BaseViewController {
         self.viewModel = viewModel
     }
     
-    //MARK:- Functionality
+    //MARK:- LifeCycle
     override func viewDidLoad() {
         super.baseViewModel = viewModel
         super.viewDidLoad()
         bindTextViewsToViewModel()
         subscribeAnalyzeButtonEnables()
     }
+    
+    
+    //MARK:- Functionality
     
     //change ingredientText in viewModel
     private func bindTextViewsToViewModel() {

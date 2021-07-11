@@ -47,8 +47,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food name,and quantity " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxW-ts-qGk">
+                                                <rect key="frame" x="0.0" y="40.5" width="374" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-yw-Vef">
-                                                <rect key="frame" x="0.0" y="40.5" width="374" height="651"/>
+                                                <rect key="frame" x="0.0" y="77.5" width="374" height="614"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,6 +101,7 @@
                     <connections>
                         <outlet property="analyzeButton" destination="x3n-sR-Ov8" id="DQ0-hr-0uJ"/>
                         <outlet property="ingredientTextView" destination="U8f-yw-Vef" id="7xG-9e-1Uq"/>
+                        <outlet property="placeHolderLabel" destination="zxW-ts-qGk" id="EKn-MM-TSZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
