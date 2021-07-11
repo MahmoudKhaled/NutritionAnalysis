@@ -55,7 +55,6 @@ extension IngredientViewModel: IngredientRepoDelegate {
     
     func didGetData(response: NutritionModel) {
         indicatorState.onNext(.loaded)
-        //TODO:- navigate to details of food
         navigator.navigateTo(destination: .dialyNutrients(response))
     }
 }

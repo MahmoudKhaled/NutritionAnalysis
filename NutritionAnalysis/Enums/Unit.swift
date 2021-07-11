@@ -1,10 +1,5 @@
-//
-//  Unit.swift
-//  NutritionAnalysis
-//
-//  Created by Mahmoud Khaled on 7/10/21.
-//
 
+//  Unit.swift
 import Foundation
 enum Unit: String, Codable {
     case percent = "%"

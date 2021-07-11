@@ -2,10 +2,15 @@
 
 import Foundation
 
+enum URLBath: String {
+    case develope = "https://api.edamam.com"
+    case staging = "https://api.edamam.com"
+}
+
 struct Constants {
 
     //MARK:- Base URL
-    static let url = "https://api.edamam.com"
+    static let url = URLBath.staging.rawValue
     static let baseUrl = "\(url)/api/"
     
     //MARK:- static App keys

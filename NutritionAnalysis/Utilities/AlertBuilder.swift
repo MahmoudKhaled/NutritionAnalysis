@@ -2,7 +2,7 @@
 
 import UIKit
 
-class AlertBuilder {
+final class AlertBuilder {
     
     private var alertController: UIAlertController
     

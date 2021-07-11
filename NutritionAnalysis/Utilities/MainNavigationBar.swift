@@ -1,13 +1,13 @@
 //  CustomNavigationController.swift
 import UIKit
 
-class MainNavigationController: UINavigationController {
+final class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        setupNavigationBarAttribute()
     }
 
-    private func setupNavigationBar() {
+    private func setupNavigationBarAttribute() {
         navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.black
         ]

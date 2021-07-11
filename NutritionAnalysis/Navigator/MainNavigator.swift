@@ -16,7 +16,7 @@ protocol MainNavigatorProtocol {
     func navigateTo(destination: MainDestination)
 }
 
-class MainNavigator: BaseNavigator, MainNavigatorProtocol {
+final class MainNavigator: BaseNavigator, MainNavigatorProtocol {
     
     func navigateTo(destination: MainDestination) {
         switch destination {

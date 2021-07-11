@@ -3,7 +3,7 @@
 
 import UIKit
 
-class MainFactory {
+final class MainFactory {
     
     static func start() -> MainNavigationController {
         return MainNavigationController(rootViewController: ingredient())
