@@ -1,21 +1,24 @@
-//  DialyNutrientsViewController.swift
+//  NutrientsViewController.swift
+
 
 import UIKit
 import RxSwift
+import RxCocoa
 
-class DialyNutrientsViewController: BaseViewController {
+public class NutrientsViewController: BaseViewController {
     
     //MARK:- Outlets
     @IBOutlet private weak var tableView: UITableView!
     
     //MARK:- ViewModel
-    private var viewModel: DialyNutrientsViewModelProtocol!
-    func setViewModel(_ viewModel: DialyNutrientsViewModelProtocol) {
+    private var viewModel: NutrientsViewModelProtocol!
+    func setViewModel(_ viewModel: NutrientsViewModelProtocol) {
         self.viewModel = viewModel
     }
-
-    //MARK:- Functionality
-    override func viewDidLoad() {
+    
+    
+    //MARK:- LifeCycle
+    public override func viewDidLoad() {
         super.baseViewModel = viewModel
         super.viewDidLoad()
         subscribeToNutrientsItems()
@@ -30,12 +33,11 @@ class DialyNutrientsViewController: BaseViewController {
                 cell.nutrition = nutrition
             }.disposed(by: disposeBage)
     }
-
 }
 
-//MARK:- setupTableView 
-extension DialyNutrientsViewController {
-    
+
+//MARK:- setupTableView
+extension NutrientsViewController {
     private func setupTableView() {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 70

@@ -4,14 +4,14 @@ import RxSwift
 import RxRelay
 
 //MARK:- BaseViewModelProcotol
-protocol BaseViewModelProtocol {
+public protocol BaseViewModelProtocol {
     var showAlertMessage: PublishSubject<String> { get set }
     var indicatorState: PublishSubject<IndicatorState> { get set }
 }
 
 public class BaseViewModel: BaseViewModelProtocol {
-    var  showAlertMessage: PublishSubject<String> = PublishSubject()
-    var indicatorState: PublishSubject<IndicatorState> = PublishSubject()
+    public var  showAlertMessage: PublishSubject<String> = PublishSubject()
+    public var indicatorState: PublishSubject<IndicatorState> = PublishSubject()
 }
 
 //MARK:- implement ErrorRepoProtocol

@@ -21,8 +21,8 @@ final class IngredientViewModel: BaseViewModel {
     private let disposBag = DisposeBag()
     private var repo: IngredientRepoProtocol
     private let navigator: MainNavigatorProtocol
+    
     //MARK:- Initialization
-   
     init(repo: IngredientRepoProtocol, navigator: MainNavigatorProtocol) {
         self.repo = repo
         self.navigator = navigator
@@ -55,8 +55,7 @@ extension IngredientViewModel: IngredientRepoDelegate {
     
     func didGetData(response: NutritionModel) {
         indicatorState.onNext(.loaded)
-        //TODO:- navigate to details of food
-        navigator.navigateTo(destination: .dialyNutrients(response))
+        navigator.navigateTo(destination: .summaryNutrients(response))
     }
 }
 
