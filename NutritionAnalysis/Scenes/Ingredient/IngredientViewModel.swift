@@ -28,7 +28,6 @@ final class IngredientViewModel: BaseViewModel {
         self.navigator = navigator
         super.init()
         self.repo.delegate = self
-        setupAnalyizeTextSubscribe()
     }
 }
 
@@ -41,20 +40,12 @@ extension IngredientViewModel: IngredientViewModelProtocol {
      */
     var subscribeIsAnalyzeEnable: Observable<Bool> {
         return analyzeText.asObservable()
-            .map{ return $0.count > 20 }
+            .map{ return $0.count > 10 }
     }
-    
-    // update ingr parameter value when analyzeText updated
-    private func setupAnalyizeTextSubscribe() {
-        analyzeText.withUnretained(self)
-            .subscribe { owner, text in
-            owner.parameters.ingr = text
-        }.disposed(by: disposBag)
-    }
-    
     
     func analyze() {
         indicatorState.onNext(.loading(userInterAction: true, hideView: false))
+        parameters.ingr = analyzeText.value
         repo.getAnalysisData(parameter: parameters)
     }
 }
