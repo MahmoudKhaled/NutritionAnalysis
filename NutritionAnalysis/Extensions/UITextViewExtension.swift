@@ -3,7 +3,6 @@
 import UIKit
 
 //MARK:- Inspectable borders and width
-@IBDesignable
 public extension UITextView {
     
     @IBInspectable var borderColor: UIColor? {

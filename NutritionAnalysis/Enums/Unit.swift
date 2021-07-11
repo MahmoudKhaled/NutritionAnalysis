@@ -1,9 +1,4 @@
-//
 //  Unit.swift
-//  NutritionAnalysis
-//
-//  Created by Mahmoud Khaled on 7/10/21.
-//
 
 import Foundation
 enum Unit: String, Codable {
