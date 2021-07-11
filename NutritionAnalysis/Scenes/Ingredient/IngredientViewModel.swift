@@ -35,7 +35,7 @@ final class IngredientViewModel: BaseViewModel {
 extension IngredientViewModel: IngredientViewModelProtocol {
     
     /**
-     when analyzeText is being greater than 20 charahcter
+     when analyzeText is being greater than 10 charahcter
         make analyaze button isEnabled els make it disabpled
      */
     var subscribeIsAnalyzeEnable: Observable<Bool> {

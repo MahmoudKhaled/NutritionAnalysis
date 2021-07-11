@@ -3,7 +3,7 @@
 import UIKit
 import RxSwift
 
-class DialyNutrientsViewController: BaseViewController {
+final class DialyNutrientsViewController: BaseViewController {
     
     //MARK:- Outlets
     @IBOutlet private weak var tableView: UITableView!

@@ -3,7 +3,7 @@
 import Foundation
 
 enum URLBath: String {
-    case develope = "https://api.edamam.com"
+    case develope = ""
     case staging = "https://api.edamam.com"
 }
 

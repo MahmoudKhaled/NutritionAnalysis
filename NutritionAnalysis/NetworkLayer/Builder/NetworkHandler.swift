@@ -51,11 +51,6 @@ class NetworkHandler {
             return .internalServerError
         }
         
-//        if let response = response.response, response.statusCode == 401 {
-//            AppDelegate.shared.setRootViewController(CustomNavigationController(rootViewController: AuthFactory.login()), animated: true)
-//            return .unauthorized
-//        }
-        
         if response.response?.statusCode != 200 && response.response?.statusCode != 201 && response.response?.statusCode != 204 {
             guard let jsonObject = try? JSONSerialization.jsonObject(with: response.data ?? Data(), options: []) as? [String: Any] else { return .internalServerError }
             if let message = jsonObject["error"] as? String {
