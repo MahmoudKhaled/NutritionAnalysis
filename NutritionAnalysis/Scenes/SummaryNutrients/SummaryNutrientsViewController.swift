@@ -16,7 +16,7 @@ final class SummaryNutrientsViewController: NutrientsViewController {
         self.viewModel = viewModel
     }
     
-    //MARK:- Functionality
+    //MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtonActions()

@@ -17,7 +17,7 @@ public class NutrientsViewController: BaseViewController {
     }
     
     
-    //MARK:- Functionality
+    //MARK:- LifeCycle
     public override func viewDidLoad() {
         super.baseViewModel = viewModel
         super.viewDidLoad()
