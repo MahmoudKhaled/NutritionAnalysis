@@ -12,7 +12,7 @@
     
 - Open the terminal.
 - Navigate to the project root directory.
-- run this commend to install all pods "pod install".
+- run this commend to install all pods `pod install`.
 - Open the project by double clicking the `NutritionAnalysis.xcworkspace` file
 - Select the build scheme which can be found right after the stop button on the top left of the IDE
 - [Command(cmd)] + R - Run app
