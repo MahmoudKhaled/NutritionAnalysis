@@ -14,7 +14,7 @@ class DialyNutrientsViewController: BaseViewController {
         self.viewModel = viewModel
     }
 
-    //MARK:- Functionality
+    //MARK:- LifeCycle
     override func viewDidLoad() {
         super.baseViewModel = viewModel
         super.viewDidLoad()

@@ -27,7 +27,6 @@ class IngredientViewController: BaseViewController {
     
     
     //MARK:- Functionality
-    
     //change ingredientText in viewModel
     private func bindTextViewsToViewModel() {
         ingredientTextView.rx.text.orEmpty
